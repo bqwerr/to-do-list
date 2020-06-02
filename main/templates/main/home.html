@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<Button type = "submit" name="getList" value="getlist">To get Lists</Button>
+	<BUTTON type = "submit" name="createList" value="createList">To Create Lists</Button>
+</form>
+{% endblock %}

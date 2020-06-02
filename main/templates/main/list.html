@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% block title %}View List{% endblock %}
+
+{% block content %}
+<h1>Your To Do List's are</h1>
+<p></p>
+	<form method="POST" action="/maintain/">
+		{% csrf_token %}
+		<!-- ls.all    # before applying user specific pages concept--> 
+		{% for list in user.todolist.all %}
+			<h4>{{list.name}} :</h4>
+				{% for item in list.item_set.all %}
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								{% if item.complete == True %}
+									<input type="checkbox" name="c{{item.id}}" value="clicked" checked>
+								{% else %}
+									<input type="checkbox" name="c{{item.id}}" value="clicked">
+								{% endif %}
+							</div>
+						</div>
+						<input type="text" value="{{item.text}}" class="form-control">
+					</div>
+				{% endfor %}	
+		{% endfor %}
+
+
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<BUTTON type = "submit" name="newItem" value="newItem" class="btn btn-success">Add Item</Button>
+			</div>
+			<input type="text" name="listName" placeholder="List Name">
+			<input type="text" name="itemName" placeholder="Item Name">
+		</div>
+
+		<Button type = "submit" name="save" value="save" class="btn btn-success">Save</Button>
+	</form>
+
+{% endblock %}
