@@ -15,6 +15,10 @@
   <p align="center">
     A user specific to-do list application built using Django Web Application framework.
     <br />
+    <a href="https://github.com/bqwerr/to-do-list">Repository</a>
+    <!-- · <a href="https://bqwerr.github.io">Explore the docs</a> -->
+    ·
+    <a href="https://github.com/bqwerr">View More »</a>
   </p>
 </div>
 
@@ -76,11 +80,7 @@ To get a local copy of this application up and running follow these example step
 
 ## Contact
 
-[GMail][gmail] \
-[LinkedIn][linkedin] \
-[GitHub][github] \
-[Website][website] 
-
+[GMail][gmail] · [LinkedIn][linkedin] · [GitHub][github] · [Website][website] 
 
 
 
