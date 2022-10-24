@@ -15,6 +15,7 @@
   <p align="center">
     A user specific to-do list application built using Django Web Application framework.
     <br />
+    <br />
     <a href="https://github.com/bqwerr/to-do-list">Repository</a>
     <!-- · <a href="https://bqwerr.github.io">Explore the docs</a> -->
     ·
